@@ -73,6 +73,7 @@ const CreatePin = ({ user }) => {
       };
       client.create(doc).then(() => {
         navigate("/");
+        window.location.reload();
       });
     } else {
       setFields(true);
@@ -177,6 +178,7 @@ const CreatePin = ({ user }) => {
                   <option
                     className="text-base border-0 outline-none capitalize bg-white text-black"
                     value={category.name}
+                    key={category.name}
                   >
                     {category.name}
                   </option>
